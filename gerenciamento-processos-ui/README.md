@@ -1,4 +1,4 @@
-# Requisitos para executar a aplicaçã
+# Requisitos para executar a aplicação
 
 ### FrontEnd
 NodeJS += 12.18.3
