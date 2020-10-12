@@ -1,9 +1,9 @@
 # Stacks utilizadas
-Postgres
-Flyway
-Lombok
-OpenAPI
-Docker
+####Postgres
+####Flyway
+####Lombok
+####OpenAPI
+####Docker
 
 ### Subir a base de dados
 Na raiz do projeto:/gerenciamento-processos-api
