@@ -1,3 +1,7 @@
+# Requisitos para executar a aplicação
+JDK 11
+Docker
+
 # Stacks utilizadas
 Postgres
 
