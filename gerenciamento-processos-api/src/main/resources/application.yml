@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    password: softplan
+    url: jdbc:postgresql://localhost/softplan?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: softplan
+  jpa:
+    database: POSTGRESQL
+  flyway:
+    locations: classpath:db/migration 
