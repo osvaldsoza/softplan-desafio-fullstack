@@ -12,6 +12,8 @@ React Thunk
 
 React Bootstrap
 
+Reducer
+
 Axios
 
 Primereact
