@@ -1,4 +1,4 @@
-# Requisitos para executar a plicação
+# Requisitos para executar a aplicação
 ### BackEnd
 JDK 11
 Docker
