@@ -42,6 +42,6 @@ public interface ProcessoControllerOpenApi {
 	@ApiOperation("Exclui um processo")
 	@ApiResponses({ @ApiResponse(code = 204, message = "processo excluído"),
 			@ApiResponse(code = 404, message = "processo não encontrado") })
-	public ResponseEntity<?> removerProcesso(@ApiParam(value = "ID de um processo", example = "1") Long processoId);
+	public ResponseEntity<?> removerProcesso(@ApiParam(value = "ID do processo", example = "1") Long processoId);
 
 }
