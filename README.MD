@@ -1,3 +1,11 @@
+# Requisitos para executar a aplicação
+### BackEnd
+JDK 11
+Docker
+
+### FrontEnd
+NodeJS += 12.18.3
+
 # Desafio implementador fullstack
 
 Seja parte da jornada de transformação digital no Brasil.
