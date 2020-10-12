@@ -15,7 +15,9 @@ OpenAPI
 Docker
 
 ### Subir a base de dados
-Na raiz do projeto:/gerenciamento-processos-api executar:
+Na raiz do projeto:/gerenciamento-processos-api 
+
+Executar:
 
 docker-compose run
 ### Documentação da API
