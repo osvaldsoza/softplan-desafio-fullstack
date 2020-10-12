@@ -1,3 +1,8 @@
+# Requisitos para executar a aplicaçã
+
+### FrontEnd
+NodeJS += 12.18.3
+
 # Stacks utilizadas
 React
 
