@@ -32,32 +32,27 @@ public class Processo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@NotNull
 	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(example = "1", required = true)
 	private Long id;
 
-	@NotBlank
 	@Column(nullable = false)
 	@ApiModelProperty(example = "0014039584RGT", required = true)
 	private String numero;
 
-	@NotBlank
 	@CreationTimestamp
 	@Column(name = "data_entrada", nullable = false, columnDefinition = "datetime")
 	@ApiModelProperty(example = "2020-10-10 13:37:25", required = true)
 	private LocalDateTime dataEntrada;
 
-	@UpdateTimestamp
 	@Column(name = "data_baixa", columnDefinition = "datetime")
 	@ApiModelProperty(example = "2020-10-15 13:37:25")
 	private LocalDateTime dataBaixa;
 
 	@Column(nullable = false)
-	@Enumerated(EnumType.STRING)
 	@ApiModelProperty(example = "Em andamento", required = true)
-	private EParecer parecer;
+	private String parecer;
 
 	@ManyToOne
 	@JoinColumn(nullable = false, name = "id_usuario")

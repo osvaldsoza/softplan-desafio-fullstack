@@ -1,5 +1,6 @@
 package br.com.osvaldsoza.gerenciamentoprocessosapi.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.osvaldsoza.gerenciamentoprocessosapi.controller.openapi.ProcessoControllerOpenApi;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.model.Processo;
+import br.com.osvaldsoza.gerenciamentoprocessosapi.model.Usuario;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.service.ProcessoService;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.utils.exceptions.EntidadeNaoEncontradoException;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.utils.exceptions.RequisicaoException;
@@ -52,7 +54,7 @@ public class ProcessoController implements ProcessoControllerOpenApi{
 	}
 	
 	@PostMapping
-	public ResponseEntity<?> salvarProcesso(@Valid @RequestBody Processo processo) {
+	public ResponseEntity<?> salvarProcesso(@RequestBody Processo processo) {
 		try {
 			processo = service.salvar(processo);
 			return ResponseEntity.status(HttpStatus.CREATED).body(processo);
@@ -61,8 +63,8 @@ public class ProcessoController implements ProcessoControllerOpenApi{
 		}
 	}
 	
-	@PutMapping("/{id}")
-	public ResponseEntity<?> atualizarProcesso(@PathVariable(name = "id") Long processoId, @RequestBody Processo processo){
+	@PutMapping("/{processoId}")
+	public ResponseEntity<?> atualizarProcesso(@PathVariable Long processoId, @RequestBody Processo processo){
 		try {
 			processo = service.atualizar(processoId, processo);
 			return ResponseEntity.status(HttpStatus.OK).body(processo);

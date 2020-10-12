@@ -1,5 +1,6 @@
 package br.com.osvaldsoza.gerenciamentoprocessosapi.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +68,8 @@ public class ProcessoService {
 	public Processo atualizar(Long processoId, Processo processo) {
 		var processoAtual = findById(processoId);
 
-		BeanUtils.copyProperties(processo, processoAtual, "id");
+		processoAtual.setDataBaixa(LocalDateTime.now());
+		BeanUtils.copyProperties(processo, processoAtual, "id","dataBaixa","dataEntrada");
 		return salvar(processoAtual);
 	}
 
