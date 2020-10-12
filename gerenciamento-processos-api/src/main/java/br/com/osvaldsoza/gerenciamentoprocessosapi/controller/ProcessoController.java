@@ -1,9 +1,6 @@
 package br.com.osvaldsoza.gerenciamentoprocessosapi.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
-
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.osvaldsoza.gerenciamentoprocessosapi.controller.openapi.ProcessoControllerOpenApi;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.model.Processo;
-import br.com.osvaldsoza.gerenciamentoprocessosapi.model.Usuario;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.service.ProcessoService;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.utils.exceptions.EntidadeNaoEncontradoException;
 import br.com.osvaldsoza.gerenciamentoprocessosapi.utils.exceptions.RequisicaoException;

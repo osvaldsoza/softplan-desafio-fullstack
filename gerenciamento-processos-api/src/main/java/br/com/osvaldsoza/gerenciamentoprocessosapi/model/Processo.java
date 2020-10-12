@@ -5,16 +5,12 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -46,6 +42,7 @@ public class Processo implements Serializable {
 	@ApiModelProperty(example = "2020-10-10 13:37:25", required = true)
 	private LocalDateTime dataEntrada;
 
+	@UpdateTimestamp
 	@Column(name = "data_baixa", columnDefinition = "datetime")
 	@ApiModelProperty(example = "2020-10-15 13:37:25")
 	private LocalDateTime dataBaixa;
